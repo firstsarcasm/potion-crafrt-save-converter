@@ -1,0 +1,10 @@
+package org.firstsarcasm.potion.craft.save.converter.dto.prefs;
+
+import lombok.Data;
+
+public @Data class MValuesItem{
+	private String data;
+	private String name;
+	private int count;
+	private String className;
+}
