@@ -6,7 +6,7 @@ public @Data class NpcForSpawn{
 	private SpawnPosition spawnPosition;
 	private String npcTemplateName;
 	private double pathTweenFullPosition;
-	private boolean pauseBeforeSpawn;
+	private Boolean pauseBeforeSpawn;
 	private TradingRandomState tradingRandomState;
 	private PartsGenerationRandomState partsGenerationRandomState;
 }

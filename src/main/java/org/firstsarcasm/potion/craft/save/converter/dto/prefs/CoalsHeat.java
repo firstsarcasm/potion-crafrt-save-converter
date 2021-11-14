@@ -1,9 +1,16 @@
 package org.firstsarcasm.potion.craft.save.converter.dto.prefs;
 
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
-public @Data class CoalsHeat{
+import java.util.List;
+
+public @Data
+class CoalsHeat {
+
+	@JsonProperty("m_values")
 	private List<Double> mValues;
+
+	@JsonProperty("m_keys")
 	private List<String> mKeys;
 }

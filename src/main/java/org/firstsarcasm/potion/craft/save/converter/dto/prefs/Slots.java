@@ -1,9 +1,16 @@
 package org.firstsarcasm.potion.craft.save.converter.dto.prefs;
 
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
-public @Data class Slots{
+import java.util.List;
+
+public @Data
+class Slots {
+
+	@JsonProperty("m_values")
 	private List<MValuesItem> mValues;
+
+	@JsonProperty("m_keys")
 	private List<String> mKeys;
 }

@@ -7,7 +7,7 @@ public @Data class CurrentBonusesItem{
 	private String bonusObjectName;
 	private int sizeIndex;
 	private double size;
-	private boolean isThereCustomPositions;
+	private Boolean isThereCustomPositions;
 	private List<Object> customPositions;
 	private double position;
 }

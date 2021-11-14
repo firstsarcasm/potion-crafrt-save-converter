@@ -4,21 +4,21 @@ import lombok.Data;
 
 public @Data class Scales{
 	private double phase;
-	private boolean capAngleOnReturnFromMaxAngle;
-	private boolean isFluctuating;
-	private boolean isCorrectBonusClicked;
+	private Boolean capAngleOnReturnFromMaxAngle;
+	private Boolean isFluctuating;
+	private Boolean isCorrectBonusClicked;
 	private double fluctuationTime;
-	private boolean isShaking;
-	private boolean isLowestPositionOnHaggleReached;
-	private boolean enablePhysics;
-	private boolean isWrongPotionOnTheScales;
+	private Boolean isShaking;
+	private Boolean isLowestPositionOnHaggleReached;
+	private Boolean enablePhysics;
+	private Boolean isWrongPotionOnTheScales;
 	private double amplitude;
 	private int movingSideSign;
 	private double timeCoefficient;
 	private double amplitudesSum;
-	private boolean isShakingToTheRight;
+	private Boolean isShakingToTheRight;
 	private double targetAngle;
-	private boolean isIncorrectBonusClicked;
+	private Boolean isIncorrectBonusClicked;
 	private int currentState;
 	private double currentAngle;
 }
