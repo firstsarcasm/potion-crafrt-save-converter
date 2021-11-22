@@ -1,6 +1,5 @@
 package org.firstsarcasm.potion.craft.save.converter.dto;
 
-import java.util.List;
 import lombok.Data;
 import org.firstsarcasm.potion.craft.save.converter.dto.prefs.ChaptersGroupsItem;
 import org.firstsarcasm.potion.craft.save.converter.dto.prefs.ChunksItem;
@@ -36,8 +35,11 @@ import org.firstsarcasm.potion.craft.save.converter.dto.prefs.SpoonRotation;
 import org.firstsarcasm.potion.craft.save.converter.dto.prefs.Talents;
 import org.firstsarcasm.potion.craft.save.converter.dto.prefs.TutorialState;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Data
-public  class PlayerPrefsDto{
+public class PlayerPrefsDto {
 	private int currentSuitability;
 	private int previousHaggleHashCode;
 	private List<Object> pestleStainsToRemove;
@@ -135,4 +137,25 @@ public  class PlayerPrefsDto{
 	private List<Object> currentPestleStains;
 	private Talents talents;
 	private TutorialState tutorialState;
+
+	public void addEveryInventoryItemCount(int amount) {
+		this.setPlayerInventory(this.getPlayerInventory()
+				.stream()
+				.peek(s -> s.setCount(s.getCount() + amount))
+				.collect(Collectors.toList()));
+	}
+
+	public void setMapPosition(double x, double y) {
+		this.setMapPosition(new MapPosition(x, y));
+	}
+
+	public void setExperienceAsNextLevelAmount() {
+		Experience experience = this.getExperience();
+		experience.setCurrentExp(experience.getNextLvlAt());
+	}
+
+	public void setTalentPoints(int currentPoints) {
+		this.getTalents().setCurrentPoints(currentPoints);
+	}
+
 }

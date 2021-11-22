@@ -1,4 +1,4 @@
-package org.firstsarcasm.potion.craft.save.converter;
+package org.firstsarcasm.potion.craft.save.converter.converter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
